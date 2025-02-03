@@ -29,6 +29,8 @@ public class LoadingDots : MonoBehaviour
         anim3 = dot3.GetComponent<Animation>();
 
         anim = GetComponent<Animation>();
+
+        Debug.Log(dotsEmpty.activeSelf);
     }
 
     // Update is called once per frame
@@ -36,12 +38,15 @@ public class LoadingDots : MonoBehaviour
     {
 
 
-        if (dotsEmpty.activeSelf == true)
+        if (dotsEmpty.activeSelf == false)
         {
+           dotsEmpty.SetActive(true);
+            
             StartFadeIn();
 
             for (int i = 0; i < 4; i++)
             {
+                Debug.Log("hello");
                 anim1.Play("dotOneAni");
                 anim2.Play("dotTwoAni");
                 anim3.Play("dotThreeAni");
@@ -49,11 +54,7 @@ public class LoadingDots : MonoBehaviour
 
             StartFadeOut();
 
-            do
-            {
-                continue;
-
-            } while (dot1.GetComponent<Image>().color.a != 0);
+            StartCoroutine(waiter(5));
 
             dotsEmpty.SetActive(false);
         }
@@ -75,4 +76,10 @@ public class LoadingDots : MonoBehaviour
             }
         }
     }
+
+    IEnumerator waiter(int secs)
+    {
+        yield return new WaitForSeconds(secs);
+    }
+
 }

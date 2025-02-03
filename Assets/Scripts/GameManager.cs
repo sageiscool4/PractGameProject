@@ -7,23 +7,25 @@ public class GameManager : MonoBehaviour
     public GameObject Buttons;
     public GameObject GameTitle;
 
-    
+    private int runCount = 0;
 
-    
 
     // Start is called before the first frame update
     void Start()
     {
-        // Buttons.SetActive(true);
-        GameTitle.SetActive(true);
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-   
+    IEnumerator waiter(int secs)
+    {
+        yield return new WaitForSeconds(secs);
+    }
+
+
 }
