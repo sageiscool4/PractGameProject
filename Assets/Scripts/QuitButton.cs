@@ -7,6 +7,8 @@ public class QuitButton : MonoBehaviour
     public GameObject PlayButton;
     private Animation anim;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class QuitButton : MonoBehaviour
             anim.Play("QuitAni");
             PlayButton.GetComponent<PlayButton>().buttonPressed = false;
         }
-        
+
+        if (gameObject.transform.position.y < -530.0f)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -1,31 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Buttons;
-    public GameObject GameTitle;
+    public GameObject WipeImage;
+    private Animation WipeAni;
 
-    private int runCount = 0;
-
-
-    // Start is called before the first frame update
-    void Start()
+     void Start()
     {
-       
+        WipeAni = WipeImage.GetComponent<Animation>();
+
+        StartCoroutine(GetRidOfWipe(3));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator GetRidOfWipe(int secs)
     {
+        WipeAni.Play("WipeOut");
 
-    }
-
-    IEnumerator waiter(int secs)
-    {
         yield return new WaitForSeconds(secs);
-    }
 
+        Destroy(WipeImage);
+    }
 
 }
