@@ -10,22 +10,14 @@ public class MenuManager : MonoBehaviour
     public GameObject PlayButton;
 
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
 
 
-        if (PlayButton.GetComponent<PlayButton>().buttonPressed == true)
+        if (PlayButton.GetComponent<PlayButton>().buttonPressed == true) //checks to see if play button was pressed
         {
-            StartCoroutine(ChangeScenes(3));
+            StartCoroutine(ChangeScenes(3)); //calls the scene change with 3 seconds 
 
 
         }
@@ -33,12 +25,13 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator ChangeScenes(int secs)
     {
-        yield return new WaitForSeconds(secs);
+        PlayButton.GetComponent<PlayButton>().buttonPressed = false; //makes sure the coroutine doesnt get called over and over
 
-        Debug.Log("change");
+        yield return new WaitForSeconds(secs); //wait for x amount of secs
 
-        PlayButton.GetComponent<PlayButton>().buttonPressed = false;
+        // Debug.Log("change"); *was for debugging purposes
 
-        SceneManager.LoadScene("Game");
+
+        SceneManager.LoadScene("Game"); //loads the game
     }
 }

@@ -22,20 +22,15 @@ public class UIController : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+  
     IEnumerator MomSpeakingBegin(int bSecs)
     {
-        yield return new WaitForSeconds(bSecs);
+        yield return new WaitForSeconds(bSecs); //wait for wipe out screen to pass
 
         textBox.SetActive(true);
         replyButton.SetActive(true);
 
-        numTimesText++;
+        numTimesText++; // how many times mom has talked
 
     }
 
@@ -43,9 +38,9 @@ public class UIController : MonoBehaviour
 
    public void replyButtonPressed()
     {
-        switch (numTimesText)
+        switch (numTimesText) //change text based on how many times she's talked
         {
-            case 1:
+            case 1: 
                 anim.SetBool("isUpset", true);
 
                 characterText.text = "There's a big corporation around here. \nThey're trying to make us go bankrupt!";

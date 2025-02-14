@@ -24,7 +24,7 @@ public class PlayButton : MonoBehaviour
     public void PlayButtonPressed()
     {
         buttonPressed = true;
-        anim.Play("PlayAni");
-        wipeAni.Play("WipeIn");
+        anim.Play("PlayAni"); // play button falls out, the other buttons will too
+        wipeAni.Play("WipeIn"); // plays the wipe in screen to change scenes without a crazy change
     }
 }
