@@ -42,7 +42,6 @@ public class UIController : MonoBehaviour
         {
             case 1: 
                 
-
                 characterText.text = "There's a big corporation around here. \nThey're trying to make us go bankrupt!";
                 replyBButton.text = "...";
                 numTimesText++;
@@ -80,6 +79,17 @@ public class UIController : MonoBehaviour
                 characterText.text = "Greg is the local craftsman! He usually only makes furniture, but I'm sure he can make machines! \nHis place isn't very hard to find in the town, don't worry.";
                 replyBButton.text = "Ok.";
                 numTimesText++;
+                break;
+
+            case 7:
+
+                characterText.text = "Ok let's go!";
+                replyBButton.text = "*Go outside*";
+                numTimesText++;
+                break;
+
+            default:
+
                 break;
 
 
