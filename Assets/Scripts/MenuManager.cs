@@ -32,6 +32,7 @@ public class MenuManager : MonoBehaviour
         // Debug.Log("change"); *was for debugging purposes
 
 
-        SceneManager.LoadScene("Game"); //loads the game
+        SceneManager.LoadScene("Warehouse"); //loads the warehouse
+
     }
 }
