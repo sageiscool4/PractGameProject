@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -86,6 +87,10 @@ public class UIController : MonoBehaviour
                 characterText.text = "Ok let's go!";
                 replyBButton.text = "*Go outside*";
                 numTimesText++;
+                break;
+
+            case 8:
+                SceneManager.LoadScene("Town");
                 break;
 
             default:

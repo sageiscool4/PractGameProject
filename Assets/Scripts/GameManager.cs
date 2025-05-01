@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GetRidOfWipe(3));
     }
 
-    IEnumerator GetRidOfWipe(int secs)
+    IEnumerator GetRidOfWipe(int secs) //Wipe the screen to black
     {
         WipeAni.Play("WipeOut");
 

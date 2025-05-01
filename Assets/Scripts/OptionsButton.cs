@@ -5,28 +5,34 @@ using UnityEngine;
 public class OptionsButton : MonoBehaviour
 {
     public GameObject PlayButton;
-    private Animation anim;
-
+    public Animator anim;
+    public PlayButton pB;
+    public int timePlayed = 0;
+    public bool isButtonPressed;
+   
     
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = gameObject.GetComponent<Animation>();
-        
+       anim = gameObject.GetComponent<Animator>();
+       pB = PlayButton.GetComponent<PlayButton>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (PlayButton.GetComponent<PlayButton>().buttonPressed == true)
+        isButtonPressed = pB.buttonPressed; // this again
+        if (isButtonPressed == true && timePlayed == 0)
         {
-            anim.Play("OptionsAni");
+            anim.SetTrigger("Button_Pressed2");
+    
+            timePlayed++;
         }
 
         if (gameObject.transform.position.y < -530.0f)
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);//make it unactive when it's off the screen
         }
     }
 }

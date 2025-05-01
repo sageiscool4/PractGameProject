@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 1476320322}
   - component: {fileID: 1476320325}
   - component: {fileID: 1476320326}
+  - component: {fileID: 1476320327}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1234,6 +1235,28 @@ MonoBehaviour:
   button: {fileID: 1476320320}
   wipeImage: {fileID: 1693171089}
   buttonPressed: 0
+  timePlayed: 0
+--- !u!95 &1476320327
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476320320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d8219929c6f82c449d4fdcd0af881ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1655621399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1308,7 @@ MonoBehaviour:
   Buttons: {fileID: 1186234980}
   GameTitle: {fileID: 459062486}
   PlayButton: {fileID: 1476320320}
+  timePlayed: 0
 --- !u!1 &1693171089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5246118326429026474, guid: 43d7ec6c13985ae4ebdb62e9d37bc490, type: 3}
@@ -1553,6 +1577,7 @@ GameObject:
   - component: {fileID: 2015472341}
   - component: {fileID: 2015472345}
   - component: {fileID: 2015472344}
+  - component: {fileID: 2015472346}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -1691,6 +1716,27 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!95 &2015472346
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015472339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d8219929c6f82c449d4fdcd0af881ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2027476071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1751,7 @@ GameObject:
   - component: {fileID: 2027476073}
   - component: {fileID: 2027476077}
   - component: {fileID: 2027476076}
+  - component: {fileID: 2027476078}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1843,6 +1890,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayButton: {fileID: 1476320320}
+--- !u!95 &2027476078
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027476071}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d8219929c6f82c449d4fdcd0af881ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4432504309707866767
 PrefabInstance:
   m_ObjectHideFlags: 0

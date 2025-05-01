@@ -6,25 +6,27 @@ public class PlayButton : MonoBehaviour
 {
     public GameObject button;
     public GameObject wipeImage;
-    private Animation anim;
+    private Animator anim;
     private Animation wipeAni;
-    public bool buttonPressed = false;
+    public bool buttonPressed;
+    private bool ifButtonP;
+    public int timePlayed = 0;
 
     private void Start()
     {
-        anim = gameObject.GetComponent<Animation>();
+        anim = gameObject.GetComponent<Animator>();
         wipeAni = wipeImage.GetComponent<Animation>();
        
     }
 
-    private void Update()
+    public void FixedUpdate()
     {
-        
+        buttonPressed = ifButtonP; //also tried something else
     }
     public void PlayButtonPressed()
     {
-        buttonPressed = true;
-        anim.Play("PlayAni"); // play button falls out, the other buttons will too
+        ifButtonP = true;
+        anim.SetTrigger("Button_Pressed1");
         wipeAni.Play("WipeIn"); // plays the wipe in screen to change scenes without a crazy change
     }
 }

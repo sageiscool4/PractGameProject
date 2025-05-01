@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
     public GameObject Buttons;
     public GameObject GameTitle;
     public GameObject PlayButton;
+    public int timePlayed = 0;
 
 
     // Update is called once per frame
@@ -15,11 +16,11 @@ public class MenuManager : MonoBehaviour
     {
 
 
-        if (PlayButton.GetComponent<PlayButton>().buttonPressed == true) //checks to see if play button was pressed
+        if (PlayButton.GetComponent<PlayButton>().buttonPressed == true && timePlayed == 0) //checks to see if play button was pressed
         {
             StartCoroutine(ChangeScenes(3)); //calls the scene change with 3 seconds 
 
-
+             
         }
     }
 
